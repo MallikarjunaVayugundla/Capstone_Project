@@ -76,7 +76,7 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
             */
 
 
-                //point(0) = (float)( ((double)u - center_x) * point(2) / model_.fx() ); //x
+           //point(0) = (float)( ((double)u - center_x) * point(2) / model_.fx() ); //x
             //point(1) = (float)( ((double)v - center_y) * point(2) / model_.fy() ); //y
             //xt=(x-319.5)*(depth/525);
             //yt=(y-239.5)*(depth/525);

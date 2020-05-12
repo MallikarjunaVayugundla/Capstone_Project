@@ -4,9 +4,9 @@ It reads the depth map from a image file and does the conversion to a
  3d point cloud with respect to the camera frame.
 
 ###### Dependencies:
-CImg
-PCL
-Eigen
+* CImg
+* PCL
+* Eigen
 
 ###### Build Instructions:
 The README is included with the project and has instructions for building/running the project.

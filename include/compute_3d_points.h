@@ -25,12 +25,10 @@ private:
     //define camera parameters needed for computing 3d points from depth image
     //intrinsics K matrix [fx, s, cx, 0, fy, cy, 0, 0, 1]
     // from  K: [864.388, -0.002431, 519.732, 0.0, 863.858, 385.719, 0.0, 0.0, 1.0]
-    //taken from for: hcru2_camera_calibration_pt_stereo.txt -> calibration/20181122_hcru2_camera_calibration_pt_stereo.txt
-    const float m_focal_length_x =864.388;  //focal length of the camera
-    const float m_focal_length_y =863.858;  //focal length of the camera
-    const float m_base_line=0.09058240333891236;      //base line of the stereo camera setup
-    const float m_principal_center_x=519.732;
-    const float m_principal_center_y=385.719;
+    const float m_focal_length_x =525;  //focal length of the camera
+    const float m_focal_length_y =525;  //focal length of the camera
+    const float m_principal_center_x=319.5;
+    const float m_principal_center_y=239.5;
     //2d depth_image;
     /*
      * pixel dimension: scalar?

@@ -75,11 +75,6 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
             }
             */
 
-
-           //point(0) = (float)( ((double)u - center_x) * point(2) / model_.fx() ); //x
-            //point(1) = (float)( ((double)v - center_y) * point(2) / model_.fy() ); //y
-            //xt=(x-319.5)*(depth/525);
-            //yt=(y-239.5)*(depth/525);
             xt=(x-m_principal_center_x)*(depth/m_focal_length_x);
             yt=(y-m_principal_center_y)*(depth/m_focal_length_y);
             if(depth > 0)
@@ -119,22 +114,9 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
     viewer.addPointCloud (depthCloud,"body");// note that before it was showCloud
     viewer.spin();
 
-    //use Matplotlib for C++ to visualize when not using pcl??
-
-
-
-
-
     }
 
 CImg<uint32_t> Compute3DPoints::LoadDepthImage(std::string depth_image_file) {
-    /*
-     * ***
-     * Looks like loaded image has only aresolution of char and doesn't represent actual distance; So, use actual data and see!!
-     * Or find a way to save and load actual depth data
-     * Verify by saving actual depth from ros and planning node on what's used!!
-     */
-
     //use CImg library to start with!?
     CImg<uint32_t> image(depth_image_file.c_str());
     //show loaded image
@@ -146,10 +128,6 @@ CImg<uint32_t> Compute3DPoints::LoadDepthImage(std::string depth_image_file) {
     }
 
 void Compute3DPoints::Run() {
-
     //Read depth image
     //Compute 3d points
-    //transform sensor to robot
-    //transform robot to world?
-
 }

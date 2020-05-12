@@ -38,7 +38,7 @@ private:
 public:
     //function to compute 3d points from depth image
     Compute3DPoints();
-    void ComputePoints(cimg_library::CImg<uint32_t> &depth_image_pointer);
+    void ComputePoints(cimg_library::CImg<uint32_t> &depth_image_reference);
     //function should load image to a 2d vector named depth_image
     CImg<uint32_t> LoadDepthImage(std::string depth_image_file);
     void DetectObstacles();

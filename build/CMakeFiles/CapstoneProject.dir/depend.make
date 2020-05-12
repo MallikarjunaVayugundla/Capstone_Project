@@ -3,3 +3,7 @@
 
 CMakeFiles/CapstoneProject.dir/main.cpp.o: ../main.cpp
 
+CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.o: ../include/compute_3d_points.h
+CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.o: ../src/compute_3d_points.cpp
+CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.o: /home/arjun/workspace/Projects/MMX/Development/ImageProcessing/CImg_latest/CImg-2.9.1_pre042420/CImg.h
+

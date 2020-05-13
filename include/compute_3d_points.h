@@ -42,7 +42,7 @@ public:
     //function should load image to a 2d vector named depth_image
     CImg<uint32_t> LoadDepthImage(std::string depth_image_file);
     void DetectObstacles();
-    void Run();
+    void Run(std::string depth_image_file);
 };
 
 

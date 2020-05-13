@@ -5,8 +5,8 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
 
     Compute3DPoints compute3dPoints;
-    CImg<uint32_t> depth_image = compute3dPoints.LoadDepthImage("../data/1341841278.842683.png");
-    compute3dPoints.ComputePoints(depth_image);
+    compute3dPoints.Run("../data/1341841278.842683.png");
+
 
     return 0;
 }

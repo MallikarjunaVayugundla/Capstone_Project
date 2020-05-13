@@ -6,7 +6,6 @@
 //pcl
 #include <pcl-1.10/pcl/point_types.h>
 #include <pcl-1.10/pcl/io/io.h>
-#include <pcl-1.10/pcl/io/pcd_io.h>
 #include <pcl-1.10/pcl/visualization/pcl_visualizer.h>
 #include <pcl-1.10/pcl/visualization/cloud_viewer.h>
 
@@ -115,15 +114,8 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
     std::cout << "Total values are: " << count << std::endl;
 
     //view cloud
-    //pcl::visualization::CloudViewer viewer("Cloud Viewer");
     pcl::visualization::PCLVisualizer viewer("Cloud Viewer");
 
-    /*
-    viewer.showCloud (pointCloud);
-    while (!viewer.wasStopped ())
-    {
-    }
-     */
     viewer.addPointCloud (depthCloud,"body");// note that before it was showCloud
     viewer.spin();
 
@@ -140,7 +132,9 @@ CImg<uint32_t> Compute3DPoints::LoadDepthImage(std::string depth_image_file) {
     return image;
     }
 
-void Compute3DPoints::Run() {
+void Compute3DPoints::Run(std::string depth_image_file) {
     //Read depth image
     //Compute 3d points
+    CImg<uint32_t> depth_image = LoadDepthImage(depth_image_file);
+    ComputePoints(depth_image);
 }

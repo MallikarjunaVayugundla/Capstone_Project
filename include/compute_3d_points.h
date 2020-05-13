@@ -25,10 +25,10 @@ private:
     //define camera parameters needed for computing 3d points from depth image
     //intrinsics K matrix [fx, s, cx, 0, fy, cy, 0, 0, 1]
     // from  K: [864.388, -0.002431, 519.732, 0.0, 863.858, 385.719, 0.0, 0.0, 1.0]
-    const float m_focal_length_x =525;  //focal length of the camera
-    const float m_focal_length_y =525;  //focal length of the camera
-    const float m_principal_center_x=319.5;
-    const float m_principal_center_y=239.5;
+    float m_focal_length_x =525;  //focal length of the camera
+    float m_focal_length_y =525;  //focal length of the camera
+    float m_principal_center_x=319.5;
+    float m_principal_center_y=239.5;
     int m_point_cloud_size=0;
     //2d depth_image;
     /*
@@ -47,6 +47,15 @@ public:
     void Run(std::string depth_image_file);
     //interface info method to user
     int GetPointCloudSize();
+    //getters and setters for camera intrinsic calibration parameters
+    float GetFocalLengthX(){return m_focal_length_x;};
+    float GetFocalLengthY(){return m_focal_length_y;};
+    float GetPrincipalCenterX(){return m_principal_center_x;};
+    float GetPrincipalCenterY(){return m_principal_center_y;};
+    void SetFocalLengthX(float focal_length_x){m_focal_length_x=focal_length_x;};
+    void SetFocalLengthY(float focal_length_y){m_focal_length_y=focal_length_y;};
+    void SetPrincipalCenterX(float principal_center_x){ m_principal_center_x=principal_center_x;};
+    void SetPrincipalCenterY(float principal_center_y){ m_principal_center_y=principal_center_y;};
 };
 
 

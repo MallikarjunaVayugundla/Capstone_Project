@@ -14,6 +14,12 @@ string
 /home/arjun/workspace/Projects/MMX/Development/ImageProcessing/CImg_latest/CImg-2.9.1_pre042420/CImg.h
 -
 
+/home/arjun/CLionProjects/CapstoneProject/main.cpp
+iostream
+-
+include/compute_3d_points.h
+/home/arjun/CLionProjects/CapstoneProject/include/compute_3d_points.h
+
 /home/arjun/CLionProjects/CapstoneProject/src/compute_3d_points.cpp
 ../include/compute_3d_points.h
 /home/arjun/CLionProjects/CapstoneProject/include/compute_3d_points.h

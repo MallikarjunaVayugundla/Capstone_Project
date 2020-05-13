@@ -46,5 +46,12 @@ The README also indicates where in the code (i.e. files and line numbers)
 
 3. The project accepts user input and processes the input.
    The project accepts input from a user as part of the necessary operation of the program.
+  Object Oriented Programming: 
+4. The project uses Object Oriented Programming techniques.     
+   The project code is organized into classes with class attributes to hold the data, and class methods to perform tasks.
    
-4. 
+5. Classes use appropriate access specifiers for class members. 
+   All class data members are explicitly specified as public, protected, or private.
+  
+6. Classes abstract implementation details from their interfaces.  	   
+   All class member functions document their effects, either through function names, comments, or formal documentation. Member functions do not change program state in undocumented way

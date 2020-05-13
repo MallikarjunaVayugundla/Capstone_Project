@@ -13,11 +13,19 @@ It reads the depth map from a image file and does the conversion to a
     * Version: 3.3.7
 
 ###### Build Instructions:
-The README is included with the project and has instructions for building/running the project.
+Info: The README is included with the project and has instructions for building/running the project.
 If any additional libraries are needed to run the project, these are indicated with cross-platform installation instructions.
 
+* Install dependencies mentioned above under Dependencies.
+* This project uses CMake to build 
+    * Version Min. : 3.16
+    * Steps:
+        * mkdir build
+        * cd build
+        * cmake ..
+        * make
 
 ###### Rubric Points addressed:
-The README indicates which rubric points are addressed. 
+Info: The README indicates which rubric points are addressed. 
 The README also indicates where in the code (i.e. files and line numbers)
  that the rubric points are addressed.

@@ -10,6 +10,14 @@ It reads the depth map from a image file and does the conversion to a
  3d point cloud with respect to the camera frame.
  An example image that is loaded by default is in the 'data' folder.**
  
+**Code Structure:**
+* main.cc: main function to test the project functionality
+* include folder: project header files and necessary include headers
+* src folder: folder for project source files
+* data folder: folder for sample test data
+* include/compute_3d_points.h: header for pointcloud class containing class declarations
+* src/compute_3d_points.cpp: src file for pointcloud class containing class definitions
+ 
  
 
 ###### Dependencies:

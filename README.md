@@ -33,6 +33,7 @@ If any additional libraries are needed to run the project, these are indicated w
         * cd build
         * cmake ..
         * make
+* Run/Launch executable: ./CapstoneProject 
 
 ###### Rubric Points addressed:
 Info: The README indicates which rubric points are addressed. 

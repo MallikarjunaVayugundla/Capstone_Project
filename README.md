@@ -77,4 +77,11 @@ The README also indicates where in the code (i.e. files and line numbers)
    
    **All the class member functions abstract the functionality from the user and only provide necessary interfaces.
     Also, the meaningful function names along with the comments provide the user with necessary documentation on their functionality and usage.
-    This can be observed from the functions provided in the 'Compute3DPoints' class.**  
+    This can be observed from the functions provided in the 'Compute3DPoints' class.**
+    
+    Memory Management:<br />
+ 7.The project makes use of references in function declarations.	
+   At least two variables are defined as references, or two functions use pass-by-reference in the project code.<br />
+   
+   **The project uses references to pass the depth image loaded to the functions displaying the depth image and to the function
+   computing the 3d point cloud. This can be seen in the function definition of 'Compute3DPoints::Run' in the 'compute_3d_points.cpp' source file.**  

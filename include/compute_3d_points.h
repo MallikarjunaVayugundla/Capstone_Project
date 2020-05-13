@@ -41,6 +41,9 @@ private:
     void ComputePoints(cimg_library::CImg<uint32_t> &depth_image_reference);
     //function should load image to a 2d vector named depth_image
     CImg<uint32_t> LoadDepthImage(std::string depth_image_file);
+    //display depth map image that is given as input
+    void DisplayDepthImage(cimg_library::CImg<uint32_t> &depth_image_reference);
+
 public:
     Compute3DPoints();
     //interface main method to user

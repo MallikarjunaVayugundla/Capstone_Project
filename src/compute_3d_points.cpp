@@ -121,19 +121,23 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
 
     }
 
-CImg<uint32_t> Compute3DPoints::LoadDepthImage(std::string depth_image_file) {
-    CImg<uint32_t> image(depth_image_file.c_str());
-    //show loaded image
-    CImgDisplay disp(image,"Depth Image",0);
+void Compute3DPoints::DisplayDepthImage(cimg_library::CImg<uint32_t> &depth_image_reference) {
+    CImgDisplay disp(depth_image_reference,"Depth Image",0);
     std::cout<< "Close image window to continue!!" << std::endl;
     while (!disp.is_closed() && !disp.is_keyQ() && !disp.is_keyESC()) {
-        disp.resize(false).display(image).wait(20);}
+        disp.resize(false).display(depth_image_reference).wait(20);}
+}
+
+CImg<uint32_t> Compute3DPoints::LoadDepthImage(std::string depth_image_file) {
+    CImg<uint32_t> image(depth_image_file.c_str());
     return image;
     }
 
 void Compute3DPoints::Run(std::string depth_image_file) {
-    //Read depth image
     //Compute 3d points
     CImg<uint32_t> depth_image = LoadDepthImage(depth_image_file);
+    //show loaded image
+    DisplayDepthImage(depth_image);
+    //Read depth image
     ComputePoints(depth_image);
 }

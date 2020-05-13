@@ -77,25 +77,26 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
             // Erroneous detections shall be represented by quiet (non-signaling) NaNs.
             // Finally, out of range detections will be represented by +Inf."
             // filter missing points (denoted by NaNs) or points too close (probably invalid?? do we need this check??)
-           /*
-            if(std::isnan(depth) || (!std::isfinite(depth) && depth < 0) || (depth < 0.001)) // || (depth>1499.0))
+
+            if(std::isnan(depth) || (!std::isfinite(depth) && depth < 0)) // || (depth>1499.0))
             {
-                std::cout<< "skipping a value for nana;" << std::endl;
+                std::cout<< "skipping a value for nan;" << std::endl;
                 continue;
             }
+            /*
+              // filter camera dist
+              if(depth < 0.001) { //0.01
+                  std::cout<< "skipping a valuefor less depth;" << std::endl;
+                  continue;
+              }
 
-            // filter camera dist
-            if(depth < 0.1) { //0.01
-                std::cout<< "skipping a valuefor less depth;" << std::endl;
-                continue;
-            }
+              //no objects detected in range (either z > maximum distance or depth==+inf, which means free space up to max_dist_
+              if(depth > 50000.0 || (!std::isfinite(depth) && depth > 0)) {
+                  std::cout<< "skipping a value for max depth;" << std::endl;
+                  continue;
+              }
+               */
 
-            //no objects detected in range (either z > maximum distance or depth==+inf, which means free space up to max_dist_
-            if(depth > 500000.0 || (!std::isfinite(depth) && depth > 0)) {
-                std::cout<< "skipping a value for max depth;" << std::endl;
-                continue;
-            }
-            */
 
             xt=(x-m_principal_center_x)*(depth/m_focal_length_x);
             yt=(y-m_principal_center_y)*(depth/m_focal_length_y);
@@ -121,13 +122,12 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
     }
 
 CImg<uint32_t> Compute3DPoints::LoadDepthImage(std::string depth_image_file) {
-    //use CImg library to start with!?
     CImg<uint32_t> image(depth_image_file.c_str());
     //show loaded image
-    CImgDisplay disp(image,"[#1] - Color Image, Gradient Norm and Blurring Gradient",0);
+    CImgDisplay disp(image,"Depth Image",0);
+    std::cout<< "Close image window to continue!!" << std::endl;
     while (!disp.is_closed() && !disp.is_keyQ() && !disp.is_keyESC()) {
         disp.resize(false).display(image).wait(20);}
-
     return image;
     }
 

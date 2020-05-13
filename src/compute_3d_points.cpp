@@ -28,7 +28,6 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
     // z //read depth from image
     // x //compute x
     // y // compute y
-    int count=0;
     float depth=0;
     float xt=0;
     float yt=0;
@@ -100,23 +99,19 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
 
             xt=(x-m_principal_center_x)*(depth/m_focal_length_x);
             yt=(y-m_principal_center_y)*(depth/m_focal_length_y);
-            count++;
-
             //pcl
             point_xyzrgb.x=xt;
             point_xyzrgb.y=-yt;
             point_xyzrgb.z=-depth;
-
 
             point_xyzrgb.a=255;
             point_xyzrgb.r=red;
             point_xyzrgb.g=green;
             point_xyzrgb.b=blue;
             depthCloud->points.push_back(point_xyzrgb);
-
         }
-    std::cout << "Total values are: " << count << std::endl;
 
+    m_point_cloud_size=depthCloud->size();
     //view cloud
     pcl::visualization::PCLVisualizer viewer("Cloud Viewer");
 

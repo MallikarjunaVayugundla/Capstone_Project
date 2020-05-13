@@ -14,17 +14,11 @@ string
 /home/arjun/workspace/Projects/MMX/Development/ImageProcessing/CImg_latest/CImg-2.9.1_pre042420/CImg.h
 -
 
-/home/arjun/CLionProjects/CapstoneProject/src/compute_3d_points.cpp
-../include/compute_3d_points.h
+/home/arjun/CLionProjects/CapstoneProject/main.cpp
+iostream
+-
+include/compute_3d_points.h
 /home/arjun/CLionProjects/CapstoneProject/include/compute_3d_points.h
-pcl-1.10/pcl/point_types.h
--
-pcl-1.10/pcl/io/io.h
--
-pcl-1.10/pcl/visualization/pcl_visualizer.h
--
-pcl-1.10/pcl/visualization/cloud_viewer.h
--
 
 /home/arjun/workspace/Projects/MMX/Development/ImageProcessing/CImg_latest/CImg-2.9.1_pre042420/CImg.h
 cstdio

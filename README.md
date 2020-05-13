@@ -2,11 +2,13 @@
 Info: The README describes the project you have built.      
  The README also indicates the file and class structure,
   along with the expected behavior or output of the program.
+  
+**Name: Point Cloud Computation from depth map**
 
-This project converts a depth image/map into a 3d pointcloud and displays. 
+**Description: This project converts a depth image/map into a 3d pointcloud and displays. 
 It reads the depth map from a image file and does the conversion to a
  3d point cloud with respect to the camera frame.
- An example image that is loaded by default is in the 'data' folder.
+ An example image that is loaded by default is in the 'data' folder.**
  
  
 
@@ -39,14 +41,23 @@ The README also indicates where in the code (i.e. files and line numbers)
  
  Loops, Functions, I/O:
  1. The project demonstrates an understanding of C++ functions and control structures.
-    A variety of control structures are used in the project.   
-    The project code is clearly organized into functions.
+    A variety of control structures are used in the project. The project code is clearly organized into functions.
+  
+    **The project uses clearly defined functions to perform operations like reading of the depth map image and computation of 3d point cloud.
+   It can be seen from the functions declared in the compute_3d_points.h file in the include folder.**
     
  2. The project reads data from a file and process the data, or the program writes data to a file.
     The project reads data from an external file or writes data to a file as part of the necessary operation of the program.
+    
+    **The project reads depth map from a png image file and computes 3d coordinates. The reading from the file is done using CImg library.
+    The main interface function 'Run' of the 'Compute3DPoints' class takes the file name as the input argument.**
 
 3. The project accepts user input and processes the input.
    The project accepts input from a user as part of the necessary operation of the program.
+   
+   **The project asks for user input to decide on the display color of the point cloud.
+   This is done within the function 'ComputePoints' of the 'Compute3DPoints' class.**
+   
   Object Oriented Programming: 
 4. The project uses Object Oriented Programming techniques.     
    The project code is organized into classes with class attributes to hold the data, and class methods to perform tasks.

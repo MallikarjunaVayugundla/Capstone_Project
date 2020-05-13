@@ -22,7 +22,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
-  "/home/arjun/workspace/Projects/MMX/Development/ImageProcessing/CImg_latest/CImg-2.9.1_pre042420"
   "/usr/local/include/vtk-8.2"
   "/usr/local/include/pcl-1.10"
   "/usr/include/eigen3"

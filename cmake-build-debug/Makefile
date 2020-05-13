@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/CapstoneProject.dir/build.make CMakeFiles/CapstoneProject.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/compute_3d_points.o: src/compute_3d_points.cpp.o
+
+.PHONY : src/compute_3d_points.o
+
+# target to build an object file
+src/compute_3d_points.cpp.o:
+	$(MAKE) -f CMakeFiles/CapstoneProject.dir/build.make CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.o
+.PHONY : src/compute_3d_points.cpp.o
+
+src/compute_3d_points.i: src/compute_3d_points.cpp.i
+
+.PHONY : src/compute_3d_points.i
+
+# target to preprocess a source file
+src/compute_3d_points.cpp.i:
+	$(MAKE) -f CMakeFiles/CapstoneProject.dir/build.make CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.i
+.PHONY : src/compute_3d_points.cpp.i
+
+src/compute_3d_points.s: src/compute_3d_points.cpp.s
+
+.PHONY : src/compute_3d_points.s
+
+# target to generate assembly for a file
+src/compute_3d_points.cpp.s:
+	$(MAKE) -f CMakeFiles/CapstoneProject.dir/build.make CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.s
+.PHONY : src/compute_3d_points.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/compute_3d_points.o"
+	@echo "... src/compute_3d_points.i"
+	@echo "... src/compute_3d_points.s"
 .PHONY : help
 
 

@@ -35,6 +35,26 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
     pcl::PointXYZRGB point_xyzrgb;
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr depthCloud(new pcl::PointCloud<pcl::PointXYZRGB>());
 
+    int red=0; int green=0; int blue=0;
+
+    cout << "Enter the choice for the pointcloud color you want: '1' for red; '2' for green; '3' for blue!" << std::endl;
+    int choice;
+    cin >> choice;
+    switch (choice) {
+        case 1:
+            red=255;
+            break;
+        case 2:
+            green=255;
+            break;
+        case 3:
+            blue=255;
+            break;
+        default:
+            red=255;
+    }
+
+
 
     /*
      * Compute 3d points from depth data:
@@ -77,30 +97,23 @@ void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
 
             xt=(x-m_principal_center_x)*(depth/m_focal_length_x);
             yt=(y-m_principal_center_y)*(depth/m_focal_length_y);
-            if(depth > 0)
-            {
-                std::cout << " x,y, d are: "  << x << ", " << y << ", " << depth << std::endl;
-
-            }
             count++;
 
             //pcl
             point_xyzrgb.x=xt;
-            point_xyzrgb.y=yt;
-            point_xyzrgb.z=depth;
+            point_xyzrgb.y=-yt;
+            point_xyzrgb.z=-depth;
+
+
             point_xyzrgb.a=255;
-            point_xyzrgb.r=0;
-            point_xyzrgb.g=0;
-            point_xyzrgb.b=255;
+            point_xyzrgb.r=red;
+            point_xyzrgb.g=green;
+            point_xyzrgb.b=blue;
             depthCloud->points.push_back(point_xyzrgb);
 
         }
     std::cout << "Total values are: " << count << std::endl;
 
-
-    //visualize computed pointcloud using some pointcloud library?
-    pcl::PointCloud<pcl::PointXYZRGB>::Ptr pointCloud(new pcl::PointCloud<pcl::PointXYZRGB>());
-    pcl::io::loadPCDFile ("/home/arjun/workspace/Projects/MMX/Development/Data/PointClouds/submap_lru_0__full_pointcloud.pcd", *pointCloud);
     //view cloud
     //pcl::visualization::CloudViewer viewer("Cloud Viewer");
     pcl::visualization::PCLVisualizer viewer("Cloud Viewer");

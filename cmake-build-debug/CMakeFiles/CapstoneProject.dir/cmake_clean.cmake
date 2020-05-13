@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CapstoneProject.dir/main.cpp.o"
+  "CMakeFiles/CapstoneProject.dir/src/compute_3d_points.cpp.o"
   "CapstoneProject"
   "CapstoneProject.pdb"
 )

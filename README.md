@@ -62,9 +62,10 @@ The README also indicates where in the code (i.e. files and line numbers)
 4. The project uses Object Oriented Programming techniques.     
    The project code is organized into classes with class attributes to hold the data, and class methods to perform tasks.<br />
    
-   **The project uses 'Compute3DPoints' class to organise the parameters, attributes and functions needed to compute a 3d point cloud from a depth map image.**
+   **The project uses 'Compute3DPoints' class to organise the parameters, attributes and functions needed to compute a 3d point cloud from a depth map image.
+   This can be extended with further classes like 'CostMap' class that uses the 3d  pointclouds computed to construct a 2d cost map that can be used for path planning.**
       
-5. Classes use appropriate access specifiers for class members. 
+5. Classes use appropriate access specifiers for class members.
    All class data members are explicitly specified as public, protected, or private.<br />
   
     **As can be seen from the 'Compute3DPoints' class definition in the 'compute_3d_points.h' file, all the data members and member functions of the class are placed under suitable access specifiers.
@@ -72,3 +73,7 @@ The README also indicates where in the code (i.e. files and line numbers)
   
 6. Classes abstract implementation details from their interfaces.  	   
    All class member functions document their effects, either through function names, comments, or formal documentation. Member functions do not change program state in undocumented way.<br />
+   
+   **All the class member functions abstract the functionality from the user and only provide necessary interfaces.
+    Also, the meaningful function names along with the comments provide the user with necessary documentation on their functionality and usage.
+    This can be observed from the functions provided in the 'Compute3DPoints' class.**  

@@ -9,6 +9,14 @@ Info: The README describes the project you have built.
 It reads the depth map from a image file and does the conversion to a
  3d point cloud with respect to the camera frame.
  An example image that is loaded by default is in the 'data' folder.**
+
+**Input:** 
+
+ ![](images/sample_depth_image.png)
+ 
+**Output:**
+
+![](images/pointcloud.png)
  
 **Code Structure:**
 * main.cc: main function to test the project functionality
@@ -19,8 +27,7 @@ It reads the depth map from a image file and does the conversion to a
 * src/compute_3d_points.cpp: src file for pointcloud class containing class definitions
  
  
-
-###### Dependencies:
+ ###### Dependencies:
 * CImg 
     * Version: 2.9.1
     * Included in include folder; Header only; No need to install;

@@ -6,6 +6,7 @@ Info: The README describes the project you have built.
 This project converts a depth image/map into a 3d pointcloud and displays. 
 It reads the depth map from a image file and does the conversion to a
  3d point cloud with respect to the camera frame.
+ An example image that is loaded by default is in the 'data' folder.
  
  
 

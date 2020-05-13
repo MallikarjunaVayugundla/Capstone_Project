@@ -29,20 +29,24 @@ private:
     const float m_focal_length_y =525;  //focal length of the camera
     const float m_principal_center_x=319.5;
     const float m_principal_center_y=239.5;
+    int m_point_cloud_size=0;
     //2d depth_image;
     /*
      * pixel dimension: scalar?
      * pixel data range: 8 bit? //use a template to work for different sizes?
      * load from file format: png?
      */
-public:
+
     //function to compute 3d points from depth image
-    Compute3DPoints();
     void ComputePoints(cimg_library::CImg<uint32_t> &depth_image_reference);
     //function should load image to a 2d vector named depth_image
     CImg<uint32_t> LoadDepthImage(std::string depth_image_file);
-    void DetectObstacles();
+public:
+    Compute3DPoints();
+    //interface main method to user
     void Run(std::string depth_image_file);
+    //interface info method to user
+    int GetPointCloudSize();
 };
 
 

@@ -15,6 +15,10 @@ Compute3DPoints::Compute3DPoints() {
     std::cout << "Compute 3dPoints constructor!" << std::endl;
 }
 
+int Compute3DPoints::GetPointCloudSize() {
+    return m_point_cloud_size;
+}
+
 void Compute3DPoints::ComputePoints(CImg<uint32_t> &depth_image_reference) {
     //image details
     //size

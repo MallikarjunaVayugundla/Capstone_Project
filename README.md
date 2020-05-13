@@ -4,9 +4,13 @@ It reads the depth map from a image file and does the conversion to a
  3d point cloud with respect to the camera frame.
 
 ###### Dependencies:
-* CImg
+* CImg 
+    * Version: 2.9.1
+    * Included in include folder; Header only; No need to install;
 * PCL
+    * Version: 1.8
 * Eigen
+    * Version: 3.3.7
 
 ###### Build Instructions:
 The README is included with the project and has instructions for building/running the project.
